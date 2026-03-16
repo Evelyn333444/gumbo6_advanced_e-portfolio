@@ -7,7 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evelyn Brackebusch_module5</title>
     <link rel="stylesheet" href="style.css">
+     <script src="https://kit.fontawesome.com/c8e4d183c2.js"></script>
     <script src="script.js" defer></script>
+   <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "3_yuEKv0ghe9wefdn",
+      });
+   })();
+</script>
 </head>
 
 <body>
@@ -53,7 +64,7 @@
         <h1 class="title">Hey</h1>
         <h1 class="title blue">I'm Evelyn.</h1>
         <p class="header__para">
-            I'm a novice <b class="blue">Frontend Software Engineer</b> with a strong passion for building web applications with great user experiences.
+            I'm a novice <b class="blue">Frontend Software Engineer</b> with a strong passion for building web applications with great <b class="blue">user experiences.</b>
             <br>
             Here's a bit more <b class="blue"> about me</b>.
         </p>
@@ -103,18 +114,17 @@
         <h4 class="modal__sub-title modal__sub-title--contact">
             I'm surrently open to new opportunities.
         </h4>
-        <form id="contact__form" action="">
+        <form id="contact__form" onsubmit="contact(event)">
             <div class="form__item">
                 <label class="form__item--label" for="name">Name</label>
-                <input class="input" name="user_name" type="text" required>
+                <input class="input" name="user_name" type="text">
             </div>
             <div class="form__item">
                 <label class="form__item--label" for="email">Email</label>
-                <input class="input" name="user_email" type="email" required>
-            </div>
+                <input class="input" name="user_email" type="email">
             <div class="form__item">
                 <label class="form__item--label" for="message">Message</label>
-                <textarea class="input" name="user_message" type="text" required></textarea>
+                <textarea class="input" name="user_message" type="text"></textarea>
             </div>
             <button id="contact__submit" class="form__submit">
                 Send it my way!
