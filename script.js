@@ -53,6 +53,17 @@ function toggleContrast() {
   }
 }
 
+let isModalOpen = false;
+function toggleModal( {
+    if (modalOpen) {
+        isModalOpen = false;
+        return document.body.classList.remove ("modal--open")
+    }
+    isModalOpen = !isModalOpen
+    document.body.classList += " modal--open"
+    // toggle modal
+})
+
 function contact(event) {
   event.preventDefault();
   const loading = document.querySelector(".modal__overlay--loading");

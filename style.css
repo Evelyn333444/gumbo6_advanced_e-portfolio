@@ -220,6 +220,8 @@ Landing Page
     position: absolute;
     bottom: 32px;
     right: 40px;
+    position: fixed;
+    z-index: 200;
 }
 
 .scroll {
