@@ -1,27 +1,46 @@
-// template_d3ks44v
-// service_hlefoil
-// 3_yuEKv0ghe9wefdn
+// Replace these three values with your own from https://dashboard.emailjs.com/
+const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+
+(function () {
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+})();
 
 function contact(event) {
     event.preventDefault()
+
+    if (
+      EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY' ||
+      EMAILJS_SERVICE_ID === 'YOUR_SERVICE_ID' ||
+      EMAILJS_TEMPLATE_ID === 'YOUR_TEMPLATE_ID'
+    ) {
+      alert(
+        'EmailJS is not configured yet. Add your Public Key, Service ID, and Template ID in script.js.'
+      )
+      return
+    }
+
     const loading = document.querySelector('.modal__overlay--loading')
-    const sucess = document.querySelector('.modal__overlay--sucess')
-     
+    const success = document.querySelector('.modal__overlay--success')
+
+    loading.classList.add('modal__overlay--visible')
+
     emailjs
         .sendForm(
-            'service_hlefoil',
-            'template_d3ks44v',
-            event.target,
-            'user_3_yuEKv0ghe9wefdn'
+            EMAILJS_SERVICE_ID,
+            EMAILJS_TEMPLATE_ID,
+            event.target
         ).then(() => {
-            loading.classList.remove("modal__overlay--visible");
-            sucess.classList += " modal__overlay--visible";
-            }).catch(() => {
-            loading.classList.remove("modal__overlay--visible");  
+            loading.classList.remove('modal__overlay--visible')
+            success.classList.add('modal__overlay--visible')
+        }).catch((error) => {
+            loading.classList.remove('modal__overlay--visible')
+            console.error('EmailJS error:', error)
             alert(
-                "The email service is temporarily unavailable. Please contact me directly on abc@gmail.com"
-            );
-            })
+                `Could not send your message (${error?.text || 'unknown error'}). Please email me directly at brackesb12@gmail.com`
+            )
+        })
 }
 
 function moveBackground(event) {
