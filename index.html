@@ -7,10 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evelyn Brackebusch_module5</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      .modal__overlay--loading i {
+        animation: contact-spin 0.8s linear infinite;
+      }
+
+      .form__submit:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+
+      @keyframes contact-spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+    </style>
      <script src="https://kit.fontawesome.com/a347dc7a1d.js" crossorigin="anonymous"></script>
-   <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
     <script src="script.js" defer></script>
 </head>
 
@@ -149,17 +161,17 @@
         <form id="contact__form" onsubmit="contact(event)">
             <div class="form__item">
                 <label class="form__item--label" for="name">Name</label>
-                <input class="input" name="user_name" type="text">
+                <input class="input" id="name" name="user_name" type="text" required>
             </div>
             <div class="form__item">
                 <label class="form__item--label" for="email">Email</label>
-                <input class="input" name="user_email" type="email">
+                <input class="input" id="email" name="user_email" type="email" required>
             </div>
             <div class="form__item">
                 <label class="form__item--label" for="message">Message</label>
-                <textarea class="input" name="user_message" type="text"></textarea>
+                <textarea class="input" id="message" name="user_message" required></textarea>
             </div>
-            <button id="contact__submit" class="form__submit">
+            <button id="contact__submit" type="submit" class="form__submit">
                 Send it my way!
             </button>
         </form>
