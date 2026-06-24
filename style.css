@@ -478,11 +478,11 @@ Modal
 .modal__exit {
   position: absolute;
   top: 30px;
-  right: 40px;
-  color: #fff;
+  left: 40px;
+  color: #242424;
   font-size: 36px;
   z-index: 100;
-  align-self: end;
+  cursor: pointer;
 }
 
 /* 
