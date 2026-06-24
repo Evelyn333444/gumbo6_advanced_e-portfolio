@@ -161,21 +161,34 @@ nav, .scroll, .header {
     transition: all 400ms;
 }
 
-.dark-theme section {
-    background-color: #242424;
-}
-
-.dark-theme .title,
-.dark-theme .section__title,
-.dark-theme .section__sub-title,
-.dark-theme .nav__link--anchor,
-.dark-theme .fa-adjust,
-.dark-theme .header__para {
+body.dark-theme {
     color: #fff;
 }
 
-.dark-theme .blue {
+body.dark-theme :where(
+    h1, h2, h3, h4, h5, h6,
+    p, span, a, label, li,
+    .title,
+    .header__para,
+    .section__title,
+    .section__sub-title,
+    .nav__link--anchor,
+    .fa-adjust,
+    .blue,
+    .modal__title,
+    .modal__sub-title,
+    .modal__para,
+    .language__name,
+    .modal__exit,
+    .footer__social--link,
+    .footer__copyright,
+    .footer__logo--popper
+) {
     color: #fff !important;
+}
+
+.dark-theme section {
+    background-color: #242424;
 }
 
 .dark-theme #personal-logo {
@@ -195,30 +208,21 @@ nav, .scroll, .header {
 }
 
 .dark-theme .link__hover-effect--white:after {
-    background-color: #242424;
+    background-color: #fff;
 }
 
 .dark-theme .mail_btn {
-    background-color: #fff;
-    color: #242424;
+    background-color: #242424;
+    color: #fff;
+    border: 2px solid #fff;
 }
 
 .dark-theme footer {
     background-color: #242424;
 }
 
-.dark-theme .footer__social--link,
-.dark-theme .footer__copyright,
-.dark-theme .footer__logo--popper {
-    color: #fff;
-}
-
 .dark-theme .footer__logo--img {
     filter: brightness(0) invert(1);
-}
-
-.dark-theme footer .link__hover-effect--white:after {
-    background-color: #fff;
 }
 
 .dark-theme .modal__about {
@@ -226,43 +230,28 @@ nav, .scroll, .header {
     color: #fff;
 }
 
-.dark-theme .modal__about .modal__title,
-.dark-theme .modal__about .modal__sub-title,
-.dark-theme .modal__para,
-.dark-theme .language__name {
-    color: #fff;
-}
-
-.dark-theme .modal__exit {
-    color: #fff;
-}
-
 .dark-theme .modal__contact {
-    background-color: #faf9f6;
-    color: #242424;
-}
-
-.dark-theme .modal__contact .modal__title,
-.dark-theme .modal__contact .modal__sub-title,
-.dark-theme .modal__contact label {
-    color: #242424;
+    background-color: #242424;
+    color: #fff;
 }
 
 .dark-theme input,
 .dark-theme textarea {
-    background-color: #faf9f6;
-    color: #242424;
-    border-color: #242424;
+    background-color: #242424;
+    color: #fff;
+    border-color: #fff;
 }
 
 .dark-theme input:hover,
-.dark-theme textarea:hover {
-    border-color: #242424;
+.dark-theme textarea:hover,
+.dark-theme input:focus,
+.dark-theme textarea:focus {
+    border-color: #fff;
 }
 
 .dark-theme .modal__overlay--loading {
-    background-color: #faf9f6;
-    color: #242424;
+    background-color: #242424;
+    color: #fff;
 }
 
 .dark-theme .shape {
