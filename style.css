@@ -217,6 +217,15 @@ body.dark-theme :where(
     border: 2px solid #fff;
 }
 
+body.dark-theme .social__link {
+    background-color: #fff;
+    color: #1e293b !important;
+}
+
+body.dark-theme .social__link i {
+    color: #1e293b !important;
+}
+
 .dark-theme footer {
     background-color: #242424;
 }
