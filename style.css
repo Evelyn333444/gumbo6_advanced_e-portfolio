@@ -7,6 +7,11 @@
 }
 html {
     scroll-behavior: smooth;
+    background-color: #faf9f6;
+}
+
+body {
+    background-color: #faf9f6;
 }
 
 #personal-logo {
@@ -24,6 +29,17 @@ p {
 }
 
 span {
+    color: #1e293b;
+}
+
+.nav__link--anchor,
+.title,
+.header__para,
+.section__title,
+.modal__about .modal__title,
+.modal__about .modal__sub-title,
+.modal__about .modal__para,
+.language__name {
     color: #1e293b;
 }
 
@@ -377,7 +393,7 @@ nav {
 
 .nav__link--anchor {
     font-size: 16px;
-    color: #242424;
+    color: #1e293b;
     font-weight: 700;
 }
 
