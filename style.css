@@ -180,20 +180,21 @@ nav, .scroll, .header {
 }
 
 .dark-theme footer {
-    background-color: rgb(245, 245, 245);
+    background-color: #242424;
 }
 
 .dark-theme .footer__social--link,
-.dark-theme .footer__copyright {
-    color: #242424;
-}
-
+.dark-theme .footer__copyright,
 .dark-theme .footer__logo--popper {
-    color: #242424;
+    color: #fff;
 }
 
 .dark-theme .footer__logo--img {
-    filter: invert(1);
+    filter: brightness(0) invert(1);
+}
+
+.dark-theme footer .link__hover-effect--white:after {
+    background-color: #fff;
 }
 
 .dark-theme .modal__about {
