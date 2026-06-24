@@ -141,29 +141,107 @@ nav, .scroll, .header {
     transition: all 400ms;
 }
 
-.dark-theme .title, .dark-theme .section__title, .dark-theme .section__sub-title, .dark-theme .nav__link--anchor, .dark_theme .fa-adjust, .dark-theme .header__para {
-    color: white;
-}
-
 .dark-theme section {
     background-color: #242424;
 }
 
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .section__sub-title,
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-adjust,
+.dark-theme .header__para {
+    color: #fff;
+}
+
 .dark-theme #personal-logo {
-    filter: none;
+    filter: brightness(0) invert(1);
 }
 
 .dark-theme .scroll__icon {
-    border-color: white;
+    border-color: #fff;
 }
 
-.dark-theme .scroll__icon:after, .dark-theme .link__hover-effect__blank:after {
-    background-color: white;
+.dark-theme .scroll__icon:after {
+    background-color: #fff;
 }
 
-.dark-theme .mail__btn {
-    background-color: white;
+.dark-theme .link__hover-effect--black:after {
+    background-color: #fff;
+}
+
+.dark-theme .link__hover-effect--white:after {
+    background-color: #242424;
+}
+
+.dark-theme .mail_btn {
+    background-color: #fff;
     color: #242424;
+}
+
+.dark-theme footer {
+    background-color: rgb(245, 245, 245);
+}
+
+.dark-theme .footer__social--link,
+.dark-theme .footer__copyright {
+    color: #242424;
+}
+
+.dark-theme .footer__logo--popper {
+    color: #242424;
+}
+
+.dark-theme .footer__logo--img {
+    filter: invert(1);
+}
+
+.dark-theme .modal__about {
+    background-color: #242424;
+    color: #fff;
+}
+
+.dark-theme .modal__about .modal__title,
+.dark-theme .modal__about .modal__sub-title,
+.dark-theme .modal__para,
+.dark-theme .language__name {
+    color: #fff;
+}
+
+.dark-theme .modal__exit {
+    color: #fff;
+}
+
+.dark-theme .modal__contact {
+    background-color: rgb(245, 245, 245);
+    color: #242424;
+}
+
+.dark-theme .modal__contact .modal__title,
+.dark-theme .modal__contact .modal__sub-title,
+.dark-theme .modal__contact label {
+    color: #242424;
+}
+
+.dark-theme input,
+.dark-theme textarea {
+    background-color: rgb(245, 245, 245);
+    color: #242424;
+    border-color: #242424;
+}
+
+.dark-theme input:hover,
+.dark-theme textarea:hover {
+    border-color: #242424;
+}
+
+.dark-theme .modal__overlay--loading {
+    background-color: rgb(245, 245, 245);
+    color: #242424;
+}
+
+.dark-theme .shape {
+    filter: invert(1);
 }
 /*
 
