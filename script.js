@@ -1,7 +1,7 @@
 // Replace these three values with your own from https://dashboard.emailjs.com/
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+const EMAILJS_PUBLIC_KEY = '3_yuEKv0ghe9wefdn';
+const EMAILJS_SERVICE_ID = 'service_xrtbvpg';
+const EMAILJS_TEMPLATE_ID = 'template_d3ks44v';
 
 (function () {
   emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
@@ -28,8 +28,8 @@ function contact(event) {
 
     emailjs
         .sendForm(
-            EMAILJS_SERVICE_ID,
-            EMAILJS_TEMPLATE_ID,
+            service_xrtbvpg,
+            template_d3ks44v,
             event.target
         ).then(() => {
             loading.classList.remove('modal__overlay--visible')
