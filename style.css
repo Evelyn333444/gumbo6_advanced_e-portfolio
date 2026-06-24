@@ -119,7 +119,7 @@ input:hover, textarea:focus {
 }
 
 .blue {
-    color: rgba(0, 0, 255, 0.827) !important;
+    color: #1e293b !important;
 }
 
 .link__hover-effect {
@@ -172,6 +172,10 @@ nav, .scroll, .header {
 .dark-theme .fa-adjust,
 .dark-theme .header__para {
     color: #fff;
+}
+
+.dark-theme .blue {
+    color: #fff !important;
 }
 
 .dark-theme #personal-logo {
