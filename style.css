@@ -598,8 +598,14 @@ Modal
   margin-bottom: 60px;
 }
 
+.project__list {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
 .project {
-  margin-bottom: 135px;
+  margin-bottom: 0;
 }
 
 .project__img {
@@ -612,6 +618,7 @@ Modal
   border-radius: 20px;
   box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
   overflow: hidden;
+  margin-bottom: 0;
 }
 
 .project__wrapper:hover .project__description {
